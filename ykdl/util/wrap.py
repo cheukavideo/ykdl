@@ -180,7 +180,7 @@ def launch_ffmpeg_download(url, name, live):
 ''')
 
     cmd = [ 'ffmpeg',
-            '-ua', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.37',
+            '-user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.37',
             '-y', '-hide_banner',
             '-headers', ''.join('%s: %s\r\n' % x for x in fake_headers.items()),
             '-i', url,
